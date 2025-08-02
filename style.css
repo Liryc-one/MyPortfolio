@@ -1,31 +1,28 @@
-/* ===== GENERAL STYLES ===== */
-
-{ box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', monospace; }
-
+/* ===== RESET ===== */ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', monospace; }
 
 body { background-color: #0d0d0d; color: #ccc; line-height: 1.6; padding: 1rem; scroll-behavior: smooth; }
 
-main { max-width: 900px; margin: auto; padding-bottom: 4rem; }
+main { max-width: 960px; margin: auto; padding-bottom: 4rem; }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 .loader { font-size: 1.8rem; color: #aaa; background: #0d0d0d; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; text-align: center; position: fixed; top: 0; left: 0; z-index: 1000; }
 
-/* ===== INTRO ===== */ .intro { text-align: center; margin-bottom: 2rem; padding-top: 2rem; }
+/* ===== INTRO SECTION ===== */ .intro { text-align: center; margin-bottom: 2rem; padding-top: 3rem; }
 
-.emoji { font-size: 3rem; }
+.emoji { font-size: 4rem; margin-bottom: 1rem; }
 
-#typewriter { font-size: 1.6rem; font-weight: bold; color: #ccc; margin-top: 1rem; }
+#typewriter { font-size: 1.6rem; font-weight: bold; color: #ccc; }
 
-/* ===== SECTIONS ===== */ section { margin-bottom: 3rem; padding: 1rem; border-left: 4px solid #333; background-color: #1a1a1a; transition: all 0.3s ease-in-out; }
+/* ===== SECTIONS ===== */ section { margin-bottom: 3rem; padding: 1.5rem; border-left: 4px solid #333; background-color: #1a1a1a; transition: all 0.3s ease-in-out; opacity: 0; transform: translateY(20px); }
 
-section.visible { transform: translateY(0); opacity: 1; }
+section.visible { opacity: 1; transform: translateY(0); }
 
 h2, h3 { color: silver; margin-bottom: 1rem; }
 
 p, li { color: #ccc; margin-bottom: 0.5rem; }
 
-ul { list-style-type: none; }
+ul { list-style-type: none; padding-left: 0; }
 
 /* ===== PROJECTS ===== */ .project-list { display: flex; flex-direction: column; gap: 1.5rem; }
 
@@ -33,19 +30,17 @@ ul { list-style-type: none; }
 
 .project:hover { transform: scale(1.02); }
 
-.project .tools { margin: 0.5rem 0; }
+.project .tools { margin: 0.5rem 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
 
-.project .tools img { width: 24px; height: 24px; margin-right: 0.3rem; filter: grayscale(100%); }
+.project .tools img { width: 24px; height: 24px; filter: grayscale(100%) brightness(0.8); }
 
-.project a { display: inline-block; color: #aaa; text-decoration: none; margin-top: 0.5rem; padding: 0.3rem 0.6rem; border: 1px solid #555; border-radius: 4px; transition: all 0.3s; }
+.project a { display: inline-block; color: #aaa; text-decoration: none; margin-top: 0.5rem; padding: 0.4rem 0.8rem; border: 1px solid #555; border-radius: 4px; transition: all 0.3s ease; }
 
 .project a:hover { background-color: #333; color: #fff; }
 
 /* ===== SKILLS ===== */ .skill-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
 
-.skill-grid img { width: 30px; height: 30px; filter: grayscale(100%); }
-
-.tool-icons img { width: 30px; height: 30px; margin: 0.25rem; filter: grayscale(100%); }
+.skill-grid img, .tool-icons img { width: 30px; height: 30px; filter: grayscale(100%) brightness(0.9); }
 
 /* ===== STARTUP PROGRESS CIRCLE ===== */ .progress-circle { margin-top: 1.5rem; max-width: 120px; }
 
@@ -75,5 +70,12 @@ footer p { margin-bottom: 1rem; color: #aaa; }
 
 #back-to-top:hover { background: #444; color: #fff; }
 
-/* ===== MEDIA ===== */ @media (max-width: 600px) { .project-list, .skill-grid { flex-direction: column; align-items: flex-start; } .project .tools img, .skill-grid img, .tool-icons img, .socials img { width: 28px; height: 28px; } }
+/* ===== MEDIA QUERIES ===== */ @media (max-width: 600px) { .project-list, .skill-grid { flex-direction: column; align-items: flex-start; }
 
+.project .tools img, .skill-grid img, .tool-icons img, .socials img { width: 26px; height: 26px; }
+
+.emoji { font-size: 3rem; }
+
+#typewriter { font-size: 1.3rem; } }
+
+              
