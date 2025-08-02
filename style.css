@@ -1,0 +1,79 @@
+/* ===== GENERAL STYLES ===== */
+
+{ box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', monospace; }
+
+
+body { background-color: #0d0d0d; color: #ccc; line-height: 1.6; padding: 1rem; scroll-behavior: smooth; }
+
+main { max-width: 900px; margin: auto; padding-bottom: 4rem; }
+
+.hidden { display: none; }
+
+.loader { font-size: 1.8rem; color: #aaa; background: #0d0d0d; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; text-align: center; position: fixed; top: 0; left: 0; z-index: 1000; }
+
+/* ===== INTRO ===== */ .intro { text-align: center; margin-bottom: 2rem; padding-top: 2rem; }
+
+.emoji { font-size: 3rem; }
+
+#typewriter { font-size: 1.6rem; font-weight: bold; color: #ccc; margin-top: 1rem; }
+
+/* ===== SECTIONS ===== */ section { margin-bottom: 3rem; padding: 1rem; border-left: 4px solid #333; background-color: #1a1a1a; transition: all 0.3s ease-in-out; }
+
+section.visible { transform: translateY(0); opacity: 1; }
+
+h2, h3 { color: silver; margin-bottom: 1rem; }
+
+p, li { color: #ccc; margin-bottom: 0.5rem; }
+
+ul { list-style-type: none; }
+
+/* ===== PROJECTS ===== */ .project-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.project { background-color: #1f1f1f; padding: 1rem; border-radius: 0.5rem; border: 1px solid #333; transition: transform 0.2s; }
+
+.project:hover { transform: scale(1.02); }
+
+.project .tools { margin: 0.5rem 0; }
+
+.project .tools img { width: 24px; height: 24px; margin-right: 0.3rem; filter: grayscale(100%); }
+
+.project a { display: inline-block; color: #aaa; text-decoration: none; margin-top: 0.5rem; padding: 0.3rem 0.6rem; border: 1px solid #555; border-radius: 4px; transition: all 0.3s; }
+
+.project a:hover { background-color: #333; color: #fff; }
+
+/* ===== SKILLS ===== */ .skill-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+
+.skill-grid img { width: 30px; height: 30px; filter: grayscale(100%); }
+
+.tool-icons img { width: 30px; height: 30px; margin: 0.25rem; filter: grayscale(100%); }
+
+/* ===== STARTUP PROGRESS CIRCLE ===== */ .progress-circle { margin-top: 1.5rem; max-width: 120px; }
+
+svg { width: 100%; height: auto; }
+
+.circle-bg { fill: none; stroke: #333; stroke-width: 3; }
+
+.circle { fill: none; stroke: #888; stroke-width: 3; stroke-linecap: round; transition: stroke-dasharray 0.5s; }
+
+.percentage { fill: #ccc; font-size: 0.4rem; text-anchor: middle; dominant-baseline: middle; }
+
+/* ===== FOOTER ===== */ footer { margin-top: 3rem; text-align: center; padding: 2rem 1rem; border-top: 1px solid #333; }
+
+footer p { margin-bottom: 1rem; color: #aaa; }
+
+.socials { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1rem; }
+
+.socials img { width: 24px; height: 24px; filter: grayscale(100%); transition: transform 0.2s ease-in-out; }
+
+.socials img:hover { transform: scale(1.1); }
+
+.hire-btn { display: inline-block; padding: 0.4rem 1rem; background-color: #333; color: #ccc; text-decoration: none; border: 1px solid #555; border-radius: 4px; transition: all 0.3s ease; }
+
+.hire-btn:hover { background-color: #555; color: #fff; }
+
+/* ===== BACK TO TOP ===== */ #back-to-top { position: fixed; bottom: 20px; right: 20px; background: #222; color: #ccc; padding: 0.5rem 0.6rem; font-size: 1.2rem; border-radius: 50%; cursor: pointer; display: none; border: 1px solid #444; transition: background 0.3s; z-index: 999; }
+
+#back-to-top:hover { background: #444; color: #fff; }
+
+/* ===== MEDIA ===== */ @media (max-width: 600px) { .project-list, .skill-grid { flex-direction: column; align-items: flex-start; } .project .tools img, .skill-grid img, .tool-icons img, .socials img { width: 28px; height: 28px; } }
+
